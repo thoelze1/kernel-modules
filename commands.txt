@@ -1,0 +1,8 @@
+cat /proc/modules
+sudo insmod file.ko
+	sudo insmod file.ko variable=420 array=1,2,3,4,5
+sudo rmmod file
+cat /var/log/kern.log
+dmesg | tail -1
+lsmod
+modinfo file.ko
