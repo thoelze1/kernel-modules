@@ -1,7 +1,3 @@
-/* find url in linux history */
-
-/* Kernel Programming */
-
 #include <linux/module.h> /* Needed by all modules */
 #include <linux/kernel.h> /* Needed for KERN_INFO, KERN_ALERT */
 #include <linux/init.h> /* Needed for __init and __exit macros */

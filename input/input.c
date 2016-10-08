@@ -1,11 +1,6 @@
-/* find url in linux history */
-
-/* Kernel Programming */
-
 #include <linux/module.h> /* Needed by all modules */
 #include <linux/kernel.h> /* Needed for KERN_INFO, KERN_ALERT */
 #include <linux/init.h> /* Needed for __init and __exit macros */
-
 #include <linux/moduleparam.h>
 #include <linux/stat.h>
 
@@ -56,8 +51,7 @@ static int __init hello_init(void)
 	printk(KERN_INFO "mylong is a long integer: %ld\n", mylong);
 	printk(KERN_INFO "mystring is a string: %s\n", mystring);
 	
-	for (i = 0; i < (sizeof myintArray / sizeof (int)); i++)
-	{
+	for (i = 0; i < (sizeof myintArray / sizeof (int)); i++) {
 		printk(KERN_INFO "myintArray[%d] = %d\n", i, myintArray[i]);
 	}
 

