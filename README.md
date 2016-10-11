@@ -6,6 +6,8 @@ I'm using this repository to explore Linux kernel programming using guides like 
 
 - [How to Write Your Own Linux Kernel Module with a Simple Example](http://www.thegeekstuff.com/2013/07/write-linux-kernel-module/?utm_source=tuicool)
 - [How To: Building your own kernel space keylogger](https://www.gadgetweb.de/programming/39-how-to-building-your-own-kernel-space-keylogger.html)
+- [Access the Linux kernel using the /proc filesystem](https://www.ibm.com/developerworks/library/l-proc/)
+- [Keycodes](http://www.comptechdoc.org/os/linux/howlinuxworks/linux_hlkeycodes.html)
 
 ## Useful commands
 
