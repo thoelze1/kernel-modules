@@ -1,3 +1,5 @@
+/* http://www.tldp.org/LDP/lkmpg/2.6/html/x892.html */
+
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/init.h>
