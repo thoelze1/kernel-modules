@@ -21,7 +21,7 @@
  * Functions for the ioctl calls 
  */
 
-ioctl_set_msg(int file_desc, char *message)
+ssize_t ioctl_set_msg(int file_desc, char *message)
 {
   int ret_val;
 
@@ -31,9 +31,11 @@ ioctl_set_msg(int file_desc, char *message)
     printf("ioctl_set_msg failed:%d\n", ret_val);
     exit(-1);
   }
+
+  return ret_val;
 }
 
-ioctl_get_msg(int file_desc)
+ssize_t ioctl_get_msg(int file_desc)
 {
   int ret_val;
   char message[100];
@@ -54,9 +56,11 @@ ioctl_get_msg(int file_desc)
   }
 
   printf("get_msg message:%s\n", message);
+
+  return ret_val;
 }
 
-ioctl_get_nth_byte(int file_desc)
+ssize_t ioctl_get_nth_byte(int file_desc)
 {
   int i;
   char c;
@@ -77,12 +81,14 @@ ioctl_get_nth_byte(int file_desc)
     putchar(c);
   } while (c != 0);
   putchar('\n');
+
+  return 0;
 }
 
 /* 
  * Main - Call the ioctl functions 
  */
-main()
+int main()
 {
   int file_desc, ret_val;
   char *msg = "Message passed by ioctl\n";
@@ -98,4 +104,6 @@ main()
   ioctl_set_msg(file_desc, msg);
 
   close(file_desc);
+
+  return 0;
 }

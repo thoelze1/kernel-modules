@@ -158,7 +158,8 @@ device_write(struct file *file,
  * calling process), the ioctl call returns the output of this function.
  *
  */
-int device_ioctl(struct inode *inode, /* see include/linux/fs.h */
+int
+device_ioctl(struct inode *inode, /* see include/linux/fs.h */
      struct file *file, /* ditto */
      unsigned int ioctl_num,  /* number and param for ioctl */
      unsigned long ioctl_param)
@@ -225,11 +226,11 @@ int device_ioctl(struct inode *inode, /* see include/linux/fs.h */
  * init_module. NULL is for unimplemented functions. 
  */
 struct file_operations Fops = {
-  .read = device_read,
-  .write = device_write,
-  .unlocked_ioctl = device_ioctl,
-  .open = device_open,
-  .release = device_release,  /* a.k.a. close */
+  read: device_read,
+  write: device_write,
+  unlocked_ioctl: device_ioctl,
+  open: device_open,
+  release: device_release,  /* a.k.a. close */
 };
 
 /* 
