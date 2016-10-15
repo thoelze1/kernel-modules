@@ -8,6 +8,7 @@ I'm using this repository to explore Linux kernel programming using guides like 
 - [How To: Building your own kernel space keylogger](https://www.gadgetweb.de/programming/39-how-to-building-your-own-kernel-space-keylogger.html)
 - [Access the Linux kernel using the /proc filesystem](https://www.ibm.com/developerworks/library/l-proc/)
 - [Keycodes](http://www.comptechdoc.org/os/linux/howlinuxworks/linux_hlkeycodes.html)
+- [Implementing an ioctl call](http://tuxthink.blogspot.com/2012/12/implementing-ioctl-call-for-kernel.html)
 
 ## Useful commands
 
